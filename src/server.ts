@@ -17,7 +17,6 @@ await knex("courses").insert({name})
 
 
 app.get("/courses", async (request: Request, response: Response) => {
-  // const courses = await knex.raw("SELECT * FROM courses")
   const courses = await knex("courses").select().orderBy("name","asc")
   response.json(courses)
 })
