@@ -22,3 +22,8 @@ faz rollback anterior
 npm run knex -- migrate:rollback --all
 faz rollback de TUDO
 @@
+
+npm run knex -- seed:make insert-courses
+npm run knex -- seed:run
+npm run knex -- migrate:make create-course-modules
+npm run knex -- migrate:latest
